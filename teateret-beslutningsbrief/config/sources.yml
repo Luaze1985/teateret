@@ -1,0 +1,25 @@
+sources:
+  - id: teateret-program
+    name: Teaterets program
+    url: https://www.teateret.no/program
+    region: local
+    topic: own_program
+    enabled: true
+
+# Referansearenaer og konkurrentkilder skal legges til som disabled og aktiveres
+# først etter at Amir eller en navngitt ansvarlig har godkjent dem.
+
+# Schema.org Event-kilder (aktiveres med --schema-events)
+  - id: visitsorlandet-events
+    name: Visit Sørlandet – arrangementer
+    url: https://www.visitsorlandet.com/opplevelser
+    region: local
+    topic: competitor_events
+    enabled: false
+
+  - id: checkin-events
+    name: Checkin – arrangementer Kristiansand
+    url: https://www.checkin.no/kristiansand
+    region: local
+    topic: competitor_events
+    enabled: false

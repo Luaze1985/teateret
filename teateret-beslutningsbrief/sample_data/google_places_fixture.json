@@ -1,0 +1,68 @@
+{
+  "rating": 4.6,
+  "total_reviews": 847,
+  "sentiment_topics": [
+    {
+      "topic": "mat",
+      "sentiment": "positive",
+      "mention_count": 12,
+      "sample_quotes": [
+        "Veldig god mat, spesielt lunsjmenyen anbefales.",
+        "Maten var god, men [ANMELDER] syntes porsjonene var litt små.",
+        "Deilig mat og hyggelig atmosfære."
+      ]
+    },
+    {
+      "topic": "service",
+      "sentiment": "mixed",
+      "mention_count": 8,
+      "sample_quotes": [
+        "Kjempebra service og vennlig betjening.",
+        "Litt treg service i dag, måtte vente 20 minutter."
+      ]
+    },
+    {
+      "topic": "lyd",
+      "sentiment": "positive",
+      "mention_count": 5,
+      "sample_quotes": [
+        "God akustikk og passe høyt lydnivå."
+      ]
+    },
+    {
+      "topic": "atmosfære",
+      "sentiment": "positive",
+      "mention_count": 15,
+      "sample_quotes": [
+        "Fantastisk stemning! Veldig koselig lokale."
+      ]
+    },
+    {
+      "topic": "pris",
+      "sentiment": "mixed",
+      "mention_count": 6,
+      "sample_quotes": [
+        "Helt ok pris for det du får.",
+        "Litt dyrt, men verdt det."
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "metric": "rating",
+      "value": 4.6,
+      "unit": "score_1_5"
+    },
+    {
+      "metric": "review_count",
+      "value": 847.0,
+      "unit": "count"
+    },
+    {
+      "metric": "popular_times_peak",
+      "value": 85.0,
+      "unit": "percent",
+      "detail": {"peak_day": "Friday", "peak_hour": 19, "description": "Fredag kl 19:00 er travlest"}
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+google_trends:
+  enabled: false
+  geo: "NO-42"  # Agder
+  timeframe: "today 3-m"  # Siste 90 dager
+  keywords:
+    - standup kristiansand
+    - teater kristiansand
+    - konsert kristiansand
+    - julebord kristiansand
+    - restaurant kristiansand
+  max_keywords_per_call: 5  # pytrends-begrensning

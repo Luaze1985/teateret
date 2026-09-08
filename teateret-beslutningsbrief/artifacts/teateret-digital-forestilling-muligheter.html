@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teateret Kristiansand – Mulighetsnotat: Digital Forestilling & Hybride Formater</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Syne:wght@700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ==========================================================================
+       TEATERET KRISTIANSAND – DESIGN SYSTEM & PDF PRINT STYLESHEET
+       Inspirert av teateret.no: Moderne, urban, brutalistisk og ren estetikk.
+       Kompakt 2-siders PDF-format uten kostnadstall.
+       ========================================================================== */
+
+    :root {
+      --color-bg: #F9F8F5;
+      --color-surface: #FFFFFF;
+      --color-surface-subtle: #F2EFE9;
+      --color-dark: #121418;
+      --color-dark-surface: #1C1F26;
+      --color-dark-border: #2B303C;
+      
+      --color-accent-gold: #C88A2E;
+      --color-accent-amber: #E29B38;
+      --color-accent-teal: #1F7A74;
+      --color-accent-purple: #5E50A1;
+      --color-accent-red: #A83232;
+      
+      --color-text-main: #1F242D;
+      --color-text-muted: #5B6472;
+      --color-text-light: #F8F9FA;
+      --color-border: #E5E0D8;
+      
+      --font-display: 'Syne', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: #E6E3DC;
+      color: var(--color-text-main);
+      line-height: 1.5;
+      font-size: 13px;
+      -webkit-font-smoothing: antialiased;
+      padding: 24px 12px;
+    }
+
+    .document-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--color-surface);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    /* Top Action Bar (kun på skjerm) */
+    .action-bar {
+      background: var(--color-dark);
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--color-text-light);
+      border-bottom: 1px solid var(--color-dark-border);
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-weight: 700;
+      color: var(--color-accent-amber);
+    }
+
+    .status-badge::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-accent-amber);
+    }
+
+    .btn-print {
+      background: var(--color-accent-gold);
+      color: #000;
+      font-weight: 700;
+      font-size: 11.5px;
+      padding: 6px 14px;
+      border: none;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-print:hover {
+      background: var(--color-accent-amber);
+      transform: translateY(-1px);
+    }
+
+    /* Header */
+    .doc-header {
+      background: var(--color-dark);
+      color: var(--color-text-light);
+      padding: 34px 40px 28px 40px;
+      border-bottom: 3px solid var(--color-accent-gold);
+    }
+
+    .brand-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .brand-logo {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+
+    .brand-logo span {
+      color: var(--color-accent-gold);
+    }
+
+    .brand-tagline {
+      font-size: 11px;
+      color: #9CA3AF;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .doc-title-area h1 {
+      font-family: var(--font-display);
+      font-size: 27px;
+      line-height: 1.2;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .doc-title-area h1 span {
+      color: var(--color-accent-amber);
+    }
+
+    .doc-subtitle {
+      font-size: 13.5px;
+      color: #D1D5DB;
+      max-width: 680px;
+      line-height: 1.45;
+    }
+
+    .meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .meta-pill {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 3px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 11px;
+      color: #E5E7EB;
+    }
+
+    .meta-pill strong {
+      color: var(--color-accent-gold);
+    }
+
+    /* Content Area */
+    .doc-content {
+      padding: 32px 40px;
+    }
+
+    /* Intro Card */
+    .intro-box {
+      background: var(--color-surface-subtle);
+      border-left: 3px solid var(--color-accent-gold);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+    }
+
+    .intro-box h3 {
+      font-family: var(--font-display);
+      font-size: 14.5px;
+      color: var(--color-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .intro-box p {
+      font-size: 12.5px;
+      color: #374151;
+      line-height: 1.5;
+    }
+
+    /* Section Headings */
+    .section-title {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      border-bottom: 2px solid var(--color-border);
+      padding-bottom: 6px;
+      margin-top: 26px;
+      margin-bottom: 16px;
+    }
+
+    .section-num {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--color-accent-gold);
+      background: var(--color-dark);
+      padding: 2px 7px;
+      border-radius: var(--radius-sm);
+    }
+
+    .section-title h2 {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--color-dark);
+      letter-spacing: -0.2px;
+    }
+
+    /* Data Highlights (Grid) */
+    .data-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .summary-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 12px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .summary-val {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--color-dark);
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    .summary-val.gold { color: var(--color-accent-gold); }
+    .summary-val.teal { color: var(--color-accent-teal); }
+
+    .summary-label {
+      font-size: 10.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      font-weight: 700;
+      color: var(--color-text-muted);
+    }
+
+    .summary-desc {
+      font-size: 10.5px;
+      color: #6B7280;
+      margin-top: 3px;
+    }
+
+    /* Opportunity Grid (6 compact concepts) */
+    .opportunities-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .opp-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-inside: avoid;
+    }
+
+    .opp-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--color-dark);
+      border-radius: var(--radius-md) 0 0 var(--radius-md);
+    }
+
+    .opp-card.c-gold::before { background: var(--color-accent-gold); }
+    .opp-card.c-teal::before { background: var(--color-accent-teal); }
+    .opp-card.c-purple::before { background: var(--color-accent-purple); }
+    .opp-card.c-red::before { background: var(--color-accent-red); }
+
+    .opp-tag {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      display: inline-block;
+    }
+
+    .opp-tag.gold { color: var(--color-accent-gold); }
+    .opp-tag.teal { color: var(--color-accent-teal); }
+    .opp-tag.purple { color: var(--color-accent-purple); }
+    .opp-tag.red { color: var(--color-accent-red); }
+
+    .opp-card h3 {
+      font-family: var(--font-display);
+      font-size: 14.5px;
+      color: var(--color-dark);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .opp-card p {
+      font-size: 12px;
+      color: #4B5563;
+      line-height: 1.45;
+      margin-bottom: 10px;
+    }
+
+    .opp-meta {
+      background: #F9FAFB;
+      padding: 8px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 11px;
+      border: 1px solid #F3F4F6;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .opp-meta span strong {
+      color: var(--color-dark);
+    }
+
+    /* Scene Match Table */
+    .scene-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin-bottom: 22px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      page-break-inside: avoid;
+    }
+
+    .scene-table th {
+      background: var(--color-dark);
+      color: #FFFFFF;
+      text-align: left;
+      padding: 8px 12px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .scene-table td {
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--color-border);
+      color: var(--color-text-main);
+    }
+
+    .scene-table tr:nth-child(even) td {
+      background: #FAF9F6;
+    }
+
+    .tag-badge {
+      display: inline-block;
+      font-size: 9.5px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+      text-transform: uppercase;
+    }
+
+    .tb-gold { background: #FEF3C7; color: #92400E; }
+    .tb-teal { background: #D1FAE5; color: #065F46; }
+    .tb-purple { background: #EDE9FE; color: #5B21B6; }
+
+    /* Next Step Callout */
+    .next-box {
+      background: var(--color-dark);
+      color: #FFFFFF;
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      page-break-inside: avoid;
+    }
+
+    .next-box-text h4 {
+      font-family: var(--font-display);
+      font-size: 14px;
+      color: var(--color-accent-amber);
+      margin-bottom: 4px;
+    }
+
+    .next-box-text p {
+      font-size: 11.5px;
+      color: #D1D5DB;
+      line-height: 1.4;
+    }
+
+    .next-tag {
+      background: rgba(200, 138, 46, 0.2);
+      border: 1px solid var(--color-accent-gold);
+      color: var(--color-accent-amber);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      white-space: nowrap;
+    }
+
+    /* Footer */
+    .doc-footer {
+      border-top: 1px solid var(--color-border);
+      padding: 18px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10.5px;
+      color: var(--color-text-muted);
+      background: #FAFAFA;
+    }
+
+    .doc-footer a {
+      color: var(--color-dark);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Print & PDF Settings */
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        padding: 0 !important;
+        font-size: 10.5pt !important;
+        color: #000000 !important;
+      }
+
+      .action-bar {
+        display: none !important;
+      }
+
+      .document-container {
+        box-shadow: none !important;
+        max-width: 100% !important;
+        border-radius: 0 !important;
+      }
+
+      .doc-header {
+        padding: 20pt 25pt !important;
+        background: #121418 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .doc-content {
+        padding: 16pt 25pt !important;
+      }
+
+      .summary-card, .opp-card, .intro-box, .next-box, .scene-table {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page-break {
+        page-break-before: always;
+        break-before: page;
+        padding-top: 12pt;
+      }
+
+      @page {
+        size: A4 portrait;
+        margin: 10mm 10mm 10mm 10mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="document-container">
+    
+    <!-- Action Bar (Skjermvisning) -->
+    <div class="action-bar">
+      <div class="status-badge">Mulighetsnotat · Digital Forestilling</div>
+      <button class="btn-print" onclick="window.print()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+        Skriv ut / Lagre som PDF
+      </button>
+    </div>
+
+    <!-- Header -->
+    <header class="doc-header">
+      <div class="brand-row">
+        <div class="brand-logo">
+          TEATERET<span>.</span>
+        </div>
+        <div class="brand-tagline">
+          KONGENS GATE 2, KRISTIANSAND · BESLUTNINGSNOTAT
+        </div>
+      </div>
+      
+      <div class="doc-title-area">
+        <h1>Muligheter for <span>Digital Forestilling</span> &amp; Hybride Formater</h1>
+        <p class="doc-subtitle">
+          Kortfattet oppsummering av hvordan Teateret kan utnytte digitale formater til å nå et større publikum, aktivere mørke scener og styrke husets profil.
+        </p>
+      </div>
+
+      <div class="meta-pills">
+        <div class="meta-pill">Datagrunnlag: <strong>129 arrangementer (2025–2026)</strong></div>
+        <div class="meta-pill">Fokus: <strong>Publikumsrekkevidde &amp; Kapasitetsutnyttelse</strong></div>
+        <div class="meta-pill">Målgruppe: <strong>Ledelsen v/ Amir</strong></div>
+      </div>
+    </header>
+
+    <main class="doc-content">
+      
+      <!-- Innsiktsboks -->
+      <section class="intro-box">
+        <h3>Hvorfor digitale forestillinger på Teateret?</h3>
+        <p>
+          Gjennomgangen av arrangementsdataene viser to tydelige mønstre: <strong>1)</strong> Helgeforestillinger (standup, juleshow, hyllestkonserter) fyller ofte Hovedscenens 450 seter, og publikum utenfor Kristiansand går glipp av showene. <strong>2)</strong> Midtukedager (man–ons) har ledig scenekapasitet som egner seg ypperlig for faglige hybrideventer, digitalt dukketeater og interaktive formater.
+        </p>
+      </section>
+
+      <!-- 1. Datadrevet oppsummering -->
+      <div class="section-title">
+        <span class="section-num">01</span>
+        <h2>Datagrunnlag i korte trekk</h2>
+      </div>
+
+      <div class="data-summary-grid">
+        <div class="summary-card">
+          <div class="summary-val gold">129</div>
+          <div class="summary-label">Arrangementer</div>
+          <div class="summary-desc">Kartlagt i perioden</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-val">4 Rom</div>
+          <div class="summary-label">Scener &amp; Sone</div>
+          <div class="summary-desc">Hoved-, Bi-, Intim-, Foajé</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-val teal">60 %</div>
+          <div class="summary-label">Musikk / Standup</div>
+          <div class="summary-desc">Stor digital appell</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-val gold">Man–Ons</div>
+          <div class="summary-label">Mørke Scener</div>
+          <div class="summary-desc">Beste potensial for B2B/Digital</div>
+        </div>
+      </div>
+
+      <!-- 2. Mulighetsområdene -->
+      <div class="section-title">
+        <span class="section-num">02</span>
+        <h2>Seks konkrete digitale mulighetsområder</h2>
+      </div>
+
+      <div class="opportunities-grid">
+        
+        <!-- Mulighet 1 -->
+        <article class="opp-card c-gold">
+          <div>
+            <span class="opp-tag gold">Pay-Per-View &amp; Direktesending</span>
+            <h3>1. «Teateret Live Pass» for utsolgte storshow</h3>
+            <p>
+              Når Hovedscenen fylles av profilerte standup-show, juleshow eller hyllestkonserter, kan det tilbys en digital billett. Publikum i hele Agder og resten av landet kan oppleve stemningen direkte fra egen stue.
+            </p>
+          </div>
+          <div class="opp-meta">
+            <span><strong>Format:</strong> Multi-kamera livestream</span>
+            <span><strong>Scene:</strong> Hovedscenen</span>
+          </div>
+        </article>
+
+        <!-- Mulighet 2 -->
+        <article class="opp-card c-teal">
+          <div>
+            <span class="opp-tag teal">Barn, Familie &amp; Region</span>
+            <h3>2. Digital scene for skoler og barnehager</h3>
+            <p>
+              <em>Baldrian og Musa</em> og barneforestillinger spilles jevnlig på Intimscenen. Ved å tilby lukket strømming på fredager formiddag kan barnehager og skoler i distrikts-Agder delta uten reisekostnader.
+            </p>
+          </div>
+          <div class="opp-meta">
+            <span><strong>Format:</strong> Lukket strøm / Sesonglisens</span>
+            <span><strong>Scene:</strong> Intimscenen</span>
+          </div>
+        </article>
+
+        <!-- Mulighet 3 -->
+        <article class="opp-card c-purple">
+          <div>
+            <span class="opp-tag purple">Interaktivitet &amp; Ungt publikum</span>
+            <h3>3. Interaktiv impro med publikumsavstemning</h3>
+            <p>
+              Under <em>ImproTorsdag</em> (KrsImpro) kan det åpnes for sanntids stemmegivning via mobil. Både sal og sofa-seere er med på å bestemme replikker, sjangre og utfordringer for skuespillerne.
+            </p>
+          </div>
+          <div class="opp-meta">
+            <span><strong>Format:</strong> Interaktiv stream + mobil-polling</span>
+            <span><strong>Scene:</strong> Intimscenen</span>
+          </div>
+        </article>
+
+        <!-- Mulighet 4 -->
+        <article class="opp-card c-gold">
+          <div>
+            <span class="opp-tag gold">B2B &amp; Faglig hybrid</span>
+            <h3>4. Kulturhus-studio for næringslivet</h3>
+            <p>
+              Bruke Biscenen på mørke ukedager (tirsdag/onsdag) som et ferdig rigget streamingstudio for lokale bedrifters kvartalssamlinger, fagdager, paneldebatter og podkaster.
+            </p>
+          </div>
+          <div class="opp-meta">
+            <span><strong>Format:</strong> Hybrid konferanse / Studio</span>
+            <span><strong>Scene:</strong> Biscenen</span>
+          </div>
+        </article>
+
+        <!-- Mulighet 5 -->
+        <article class="opp-card c-red">
+          <div>
+            <span class="opp-tag red">Matopplevelse + Kultur</span>
+            <h3>5. «Digital Helaften» med tapas til sendingen</h3>
+            <p>
+              Koble scene og kjøkken sammen: Gjesten kjøper billett til den digitale sendingen og bestiller samtidig en «Teater-tapasboks» for avhenting i restauranten før showstart.
+            </p>
+          </div>
+          <div class="opp-meta">
+            <span><strong>Format:</strong> Digital forestilling + Matpakke</span>
+            <span><strong>Kanal:</strong> Restaurant / Take-away</span>
+          </div>
+        </article>
+
+        <!-- Mulighet 6 -->
+        <article class="opp-card c-teal">
+          <div>
+            <span class="opp-tag teal">On-Demand &amp; Arkiv</span>
+            <h3>6. «Teateret Play» – Digitalt kunnskapsarkiv</h3>
+            <p>
+              Opptak av faglige foredrag, Lørdagsuniversitetet (UiA), Demokratiuka og bokbad legges ut i et søkbart videoarkiv på <code>teateret.no</code> for ettertanke og fordypning.
+            </p>
+          </div>
+          <div class="opp-meta">
+            <span><strong>Format:</strong> On-demand video (VOD)</span>
+            <span><strong>Kategori:</strong> Fag &amp; Samfunn</span>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- 3. Scene-oversikt -->
+      <div class="section-title page-break">
+        <span class="section-num">03</span>
+        <h2>Scener og egnethet for digitale formater</h2>
+      </div>
+
+      <table class="scene-table">
+        <thead>
+          <tr>
+            <th>Scene / Rom</th>
+            <th>Fysisk Kapasitet</th>
+            <th>Digitalt Hovedbruksområde</th>
+            <th>Status / Målgruppe</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Hovedscenen</strong></td>
+            <td>350–450 plasser</td>
+            <td>Pay-Per-View av store helgeshow (Standup, konserter, revy)</td>
+            <td><span class="tag-badge tb-gold">B2C Storshow</span> Publikum i hele Agder / Norge</td>
+          </tr>
+          <tr>
+            <td><strong>Biscenen</strong></td>
+            <td>148–250 plasser</td>
+            <td>Kringkastingsstudio for næringsliv, fagdager og klubbkvelder</td>
+            <td><span class="tag-badge tb-teal">B2B / Klubb</span> Næringsforening, UiA, CBRC Blues</td>
+          </tr>
+          <tr>
+            <td><strong>Intimscenen</strong></td>
+            <td>67–90 plasser</td>
+            <td>Interaktiv improteater, dukketeater for skoler, bokbad</td>
+            <td><span class="tag-badge tb-purple">Interaktiv</span> Barnehager, studenter, litteratur</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 4. Konklusjon / Lavterskel test -->
+      <div class="next-box">
+        <div class="next-box-text">
+          <h4>Anbefalt neste steg for Teateret:</h4>
+          <p>
+            Gjennomføre en enkel, lavterskel test på <strong>ett utvalgt arrangement</strong> i høst (f.eks. en utsolgt fredagsstandup eller en Lørdagsuniversitet-forelesning) for å evaluere publikumsrespons og interesse.
+          </p>
+        </div>
+        <div class="next-tag">PILOT: 1 SHOW</div>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="doc-footer">
+      <div>
+        <strong>Teateret Kristiansand</strong> · Kongens gate 2, 4610 Kristiansand · <a href="https://teateret.no">teateret.no</a>
+      </div>
+      <div>
+        Strategisk mulighetsnotat · Utarbeidet for ledelsen
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>

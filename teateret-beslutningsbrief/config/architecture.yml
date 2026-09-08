@@ -1,0 +1,8 @@
+{
+  "selected_architecture": "sequential_handoff",
+  "runtime_family": "phase_pipeline",
+  "state_style": "handoff_snapshots",
+  "approval_model": "explicit_gates",
+  "eval_mode": "contract_regression",
+  "trace_mode": "phase_and_handoff_spans"
+}

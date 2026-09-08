@@ -1,0 +1,17 @@
+sources:
+  - id: lokal-kulturkalender
+    name: Syntetisk lokal kulturkalender
+    url: https://example.com/kristiansand/program
+    region: local
+    topic: events
+    enabled: true
+  - id: nasjonal-trend
+    name: Syntetisk nasjonal trendkilde
+    url: https://example.org/kultur/trender
+    region: national
+    topic: trends
+    enabled: true
+fixtures:
+  lokal-kulturkalender: sample_data/sources/lokal-kulturkalender.html
+  nasjonal-trend: sample_data/sources/nasjonal-trend.xml
+

@@ -1,0 +1,49 @@
+{
+  "trends": [
+    {
+      "keyword": "standup kristiansand",
+      "value": 45.0,
+      "detail": {
+        "geo": "NO-42",
+        "timeframe": "today 3-m",
+        "trend_direction": "rising"
+      }
+    },
+    {
+      "keyword": "teater kristiansand",
+      "value": 62.0,
+      "detail": {
+        "geo": "NO-42",
+        "timeframe": "today 3-m",
+        "trend_direction": "stable"
+      }
+    },
+    {
+      "keyword": "konsert kristiansand",
+      "value": 38.0,
+      "detail": {
+        "geo": "NO-42",
+        "timeframe": "today 3-m",
+        "trend_direction": "falling"
+      }
+    },
+    {
+      "keyword": "julebord kristiansand",
+      "value": 5.0,
+      "detail": {
+        "geo": "NO-42",
+        "timeframe": "today 3-m",
+        "trend_direction": "rising"
+      }
+    },
+    {
+      "keyword": "restaurant kristiansand",
+      "value": 71.0,
+      "detail": {
+        "geo": "NO-42",
+        "timeframe": "today 3-m",
+        "trend_direction": "stable"
+      }
+    }
+  ]
+}

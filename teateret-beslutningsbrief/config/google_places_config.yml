@@ -1,0 +1,24 @@
+google_places:
+  enabled: false
+  places:
+    - place_id: "FILL_IN_PLACE_ID"
+      name: "Teateret Kristiansand"
+      role: primary
+      enabled: true
+    # Konkurrenter (disabled til Amir godkjenner):
+    # - place_id: "FILL_IN"
+    #   name: "Kilden"
+    #   role: competitor
+    #   enabled: false
+    # - place_id: "FILL_IN"
+    #   name: "Håndverkeren"
+    #   role: competitor  
+    #   enabled: false
+  sentiment_topics:
+    - mat
+    - service
+    - lyd
+    - atmosfære
+    - pris
+  max_reviews_per_place: 20
+  language: "no"

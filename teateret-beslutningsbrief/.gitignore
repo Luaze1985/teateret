@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+*.db
+*.db-journal
+data/
+logs/
+dist/
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+.claude/
+runs/
+sample_data/private/
+*.sqlite
+*.duckdb

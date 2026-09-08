@@ -1,0 +1,15 @@
+live_mode_enabled: false
+max_model_calls: 4
+max_retries: 1
+max_total_tokens: 50000
+max_input_chars_per_call: 120000
+model_name: fixture
+config_version: v1
+decision_questions:
+  - Hvilke arrangementstyper viser sterkest etterspørsel i de aggregerte tallene?
+  - Hvilke ferske markedssignaler er relevante for Teaterets program og markedsføring?
+  - Hvor finnes det et konkret program- eller markedshull vi bør undersøke nå?
+prompt_versions:
+  reader: v1
+  analyst: v1
+  verifier: v1

@@ -1,0 +1,9 @@
+{
+  "selected_codebase_profile": "python_service",
+  "repo_shape": "service_repo",
+  "primary_language": "python",
+  "framework": "plain_python_scripts",
+  "test_command": "python -m unittest discover -s tests",
+  "run_command": "python -m teateret_brief.cli --mode demo",
+  "deploy_surface": "local_prototype_only"
+}

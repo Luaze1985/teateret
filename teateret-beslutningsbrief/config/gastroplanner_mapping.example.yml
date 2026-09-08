@@ -1,0 +1,23 @@
+delimiter: ";"
+date_column: Dato
+label_column: Arrangement
+room_column: Rom
+event_id_column: ArrangementID
+source_system: GastroPlanner
+strict_columns: true
+metrics:
+  tickets_sold:
+    column: Billetter_Solgt
+    unit: billetter
+  capacity:
+    column: Kapasitet
+    unit: plasser
+  table_reservations:
+    column: Bordreservasjoner
+    unit: bord
+  preorder_packages:
+    column: Pakkemenyer
+    unit: pakker
+  revenue_nok:
+    column: Omsetning
+    unit: NOK

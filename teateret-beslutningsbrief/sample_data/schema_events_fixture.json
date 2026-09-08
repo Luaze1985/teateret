@@ -1,0 +1,76 @@
+{
+  "events": [
+    {
+      "name": "Latter på lørdag – Standup",
+      "startDate": "2026-08-22T20:00:00+02:00",
+      "endDate": "2026-08-22T22:00:00+02:00",
+      "location": "Hovedscenen",
+      "availability": "InStock",
+      "price": 350,
+      "priceCurrency": "NOK"
+    },
+    {
+      "name": "Jazzkveld med Bjørn Alterhaug",
+      "startDate": "2026-08-23T19:30:00+02:00",
+      "endDate": "2026-08-23T21:30:00+02:00",
+      "location": "Biscenen",
+      "availability": "InStock",
+      "price": 250,
+      "priceCurrency": "NOK"
+    },
+    {
+      "name": "Barneforestilling: Bukkene Bruse",
+      "startDate": "2026-08-24T12:00:00+02:00",
+      "endDate": "2026-08-24T13:00:00+02:00",
+      "location": "Intimscenen",
+      "availability": "LimitedAvailability",
+      "price": 150,
+      "priceCurrency": "NOK"
+    },
+    {
+      "name": "Quiz på løkka",
+      "startDate": "2026-08-25T19:00:00+02:00",
+      "endDate": "2026-08-25T22:00:00+02:00",
+      "location": "Foajeen",
+      "availability": "InStock",
+      "price": 50,
+      "priceCurrency": "NOK"
+    },
+    {
+      "name": "Standup: Else Kåss Furuseth",
+      "startDate": "2026-08-28T21:00:00+02:00",
+      "endDate": "2026-08-28T23:00:00+02:00",
+      "location": "Hovedscenen",
+      "availability": "SoldOut",
+      "price": 450,
+      "priceCurrency": "NOK"
+    },
+    {
+      "name": "Vinsmaking og Tapas",
+      "startDate": "2026-08-29T18:00:00+02:00",
+      "endDate": "2026-08-29T21:00:00+02:00",
+      "location": "Foajeen",
+      "availability": "LimitedAvailability",
+      "price": 750,
+      "priceCurrency": "NOK"
+    },
+    {
+      "name": "Impro: Nytt på nytt",
+      "startDate": "2026-08-30T19:00:00+02:00",
+      "endDate": "2026-08-30T21:00:00+02:00",
+      "location": "Biscenen",
+      "availability": "InStock",
+      "price": 200,
+      "priceCurrency": "NOK"
+    },
+    {
+      "name": "Premiere: Peer Gynt",
+      "startDate": "2026-09-02T18:30:00+02:00",
+      "endDate": "2026-09-02T21:30:00+02:00",
+      "location": "Hovedscenen",
+      "availability": "SoldOut",
+      "price": 550,
+      "priceCurrency": "NOK"
+    }
+  ]
+}

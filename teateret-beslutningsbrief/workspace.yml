@@ -1,0 +1,62 @@
+{
+  "name": "teateret-beslutningsbrief",
+  "profile": "workflow_multi_agent",
+  "created_at": "2026-08-19",
+  "capabilities": [
+    "session_state",
+    "compaction",
+    "logging",
+    "permissions",
+    "verification"
+  ],
+  "lifecycle": {
+    "mode": "workspace_first",
+    "promotion_status": "workspace_only",
+    "promotion_review_template": "templates/PROFILE_PROMOTION_REVIEW_TEMPLATE.md"
+  },
+  "required_paths": [
+    "workspace.yml",
+    "README.md",
+    "AGENTS.md",
+    "config",
+    "config/architecture.yml",
+    "config/agents.yml",
+    "config/codebase.yml",
+    "tasks/active",
+    "tasks/archive",
+    "logs",
+    "state/checkpoints",
+    "state/context",
+    "state/context/use_case_brief.md",
+    "state/context/working_context.md",
+    "state/context/short_prompt_request.md",
+    "state/context/claude_context_packet.md",
+    "state/checkpoints/000_initial_checkpoint.md",
+    "reviews/claude",
+    "reviews/claude/000_review_packet.md",
+    "reviews/claude/000_review_response.md",
+    "agents",
+    "flows/sequential",
+    "flows/branching",
+    "handoffs",
+    "outputs",
+    "evals",
+    "flows/sequential/workflow_overview.md",
+    "handoffs/architecture_handoff.md",
+    "handoffs/codex_handoff.md",
+    "evals/evaluation-model.md",
+    "evals/trace-and-observability.md",
+    "outputs/production-readiness-checklist.md",
+    "handoffs/initial_handoff.md",
+    "prompts",
+    "transcripts",
+    "artifacts",
+    "archive/parked",
+    "state/context/smallest_artifact_case.md",
+    "prompts/001_prompt_packet.md",
+    "transcripts/001_transcript_and_decision_log.md"
+  ],
+  "workspace_features": [
+    "simonw_mode_v1"
+  ]
+}

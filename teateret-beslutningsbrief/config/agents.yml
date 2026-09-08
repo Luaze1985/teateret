@@ -1,0 +1,6 @@
+{
+  "selected_agent_pack": "coordinator_specialists",
+  "roles": ["kildeleser", "analytiker", "kontrollor"],
+  "handoff_policy": "fixed_sequential_pipeline",
+  "write_scope_policy": "roles_return_validated_json_only"
+}
